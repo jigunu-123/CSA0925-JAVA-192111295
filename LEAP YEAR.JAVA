@@ -1,55 +1,19 @@
 import java.util.*;
-public class leap
+class Leap
 {
-	public static void main(String[] args)
-	{
-		int year,i,month,day;
-		Scanner sc=new Scanner(System.in);
-	      System.out.print("Enter date = ");
-		int[] date = new int[3];
-		for(i=0;i<3;i++)
-		{
-			if(!sc.hasNextInt())
-			{
-				System.out.print("Invalid");
-				return;
-			}
-		     date[i]=sc.nextInt();
-		}
-		day=date[0];
-		month=date[1];
-		year=date[2];
-		if(year<0||day<0||month<0)
-      	{
-       		System.out.print("Invalid");
-            	return;
-      	}
-    		if(year==0||day==0||month==0)
-    		{
-			System.out.print("Invalid");
-            	return;    		
-		}
-		if(year%100==0)
-		{
-			if(year%400==0)
-			{
-				System.out.print(year+" is leap year");
-			}
-			else
-			{
-				System.out.print(year+" is not a leap year");
-			}
-		}
-		else
-		{
-			if(year%4==0)
-			{
-				System.out.print(year+" is leap year");
-			}
-			else
-			{
-				System.out.print(year+" is not a leap year");
-			}
-		}
-	}	
+public static void main(String arg[])
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("enter date(MM/DD/YYYY):");
+String inputDate=sc.nextLine();
+int year=Integer.parseInt(inputDate.substring(inputDate.lastIndexOf("/")+1));
+if((year%4==0 && year%100!=0)||(year % 400==0))
+{
+System.out.println("it is a leap year");
+}
+else
+{
+System.out.println("it is not a leap year");
+}
+}
 }
