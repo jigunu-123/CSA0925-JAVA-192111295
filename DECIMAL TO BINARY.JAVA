@@ -5,26 +5,15 @@ public class DecimalToBinary
     public static void main(String[] args) 
     {
         Scanner sc = new Scanner(System.in);
-         
-        System.out.println("Enter The Decimal Number : ");
-         
-        int inputNumber = sc.nextInt();
-           
-        int copyOfInputNumber = inputNumber;
-         
-      String binary = "";
-         
-        int rem = 0;
-         
-      while (inputNumber > 0)
+        int i,bin=0,rem,no;
+     System.out.println("Enter The Decimal Number : ");
+    no= sc.nextInt();
+    while (no!= 0)
         {
-            rem = inputNumber % 2;
-             
-            binary =  rem + binary;
-             
-            inputNumber = inputNumber/2;
+       rem = no% 2;
+       bin+=i*rem;
+        no =no/2;
         }
-         
-        System.out.println("Binary Equivalent of "+copyOfInputNumber+" is "+binary);
+       System.out.println("Binary number is "+bin);
     }
 }
