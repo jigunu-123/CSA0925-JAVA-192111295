@@ -13,7 +13,7 @@ public class DecimalToBinary
        rem = no% 2;
        bin+=i*rem;
         no =no/2;
-        }
+        i=i*10;        }
        System.out.println("Binary number is "+bin);
     }
 }
