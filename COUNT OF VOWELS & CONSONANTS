@@ -1,0 +1,32 @@
+import java.util.*;
+class Voweldis
+{
+public static void main(String arg[])
+{
+int i;
+String str="i am swathi";
+int vcount=0,ccount=0;
+String vowel=" ";
+char ch;
+String consonant=" ";
+int n=str.length();
+for(i=0;i<n;i++)
+{
+ch=str.charAt(i);
+if(ch=='a'|| ch=='e'||ch=='i'||ch=='o'||ch=='u')
+{
+vowel=vowel+ch+" ";
+vcount++;
+}
+else{
+consonant+=ch+" ";
+ccount++;
+}
+}
+System.out.println("no.of vowels:"+vcount);
+System.out.println("no.of consonants:"+ccount);
+System.out.println("no.of vowels:"+vowel);
+System.out.println("no.of consonants:"+consonant);
+System.out.println("length:"+n);
+}
+}
