@@ -1,0 +1,10 @@
+import java.util.*;
+class Lyear
+{
+public static void main(String arg[])
+{
+int n=2021;
+string result=(n%4==0)? "is leap year": "is not a leap year";
+System.out.println(year+" "+result);
+}
+}
